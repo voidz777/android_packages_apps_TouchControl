@@ -23,7 +23,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
+import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -50,23 +50,21 @@ public class TouchControlSettings extends PreferenceFragment
     public static final String PREF_DOUBLETAP2WAKE2 = "doubletap_2_wake2";
     public static final String PREF_SWEEP2WAKE = "sweep_2_wake";
     public static final String PREF_SWEEP2SLEEP = "sweep_2_sleep";
-    public static final String PREF_ENABLE_GESTURES = "enable gestures";
     public static final String PREF_POWERKEYSUSPEND = "powerkey_suspend";
     public static final String PREF_WAKE_TIMEOUT = "wake_timeout";
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
     public static final String PREF_TOUCHWAKE = "touch_wake";
     public static final String PREF_TOUCHWAKE_TIMEOUT = "touch_wake_timeout";
 
-    private CheckBoxPreference mSetOnBoot;
+    private SwitchPreference mSetOnBoot;
     private ListPreference mDoubletap2Wake;
-    private CheckBoxPreference mDoubletap2Wake2;
+    private SwitchPreference mDoubletap2Wake2;
     private ListPreference mSweep2Wake;
     private ListPreference mSweep2Sleep;
-    private CheckBoxPreference mEnableGestures;
-    private CheckBoxPreference mPowerkeySuspend;
+    private SwitchPreference mPowerkeySuspend;
     private SeekBarPreference mWakeTimeout;
     private SeekBarPreference mVibrationStrength;
-    private CheckBoxPreference mTouchWake;
+    private SwitchPreference mTouchWake;
     private SeekBarPreference mTouchWakeTimeout;
 
     private SharedPreferences mPreferences;
@@ -119,20 +117,19 @@ public class TouchControlSettings extends PreferenceFragment
             alertDialog.show();
         }
 
-        mSetOnBoot = (CheckBoxPreference) prefs.findPreference(PREF_SOB);
+        mSetOnBoot = (SwitchPreference) prefs.findPreference(PREF_SOB);
         mDoubletap2Wake = (ListPreference) prefs.findPreference(PREF_DOUBLETAP2WAKE);
-        mDoubletap2Wake2 = (CheckBoxPreference) prefs.findPreference(PREF_DOUBLETAP2WAKE2);
+        mDoubletap2Wake2 = (SwitchPreference) prefs.findPreference(PREF_DOUBLETAP2WAKE2);
         mSweep2Wake = (ListPreference) prefs.findPreference(PREF_SWEEP2WAKE);
         mSweep2Sleep = (ListPreference) prefs.findPreference(PREF_SWEEP2SLEEP);
-        mEnableGestures = (CheckBoxPreference) prefs.findPreference(PREF_ENABLE_GESTURES);
-        mPowerkeySuspend = (CheckBoxPreference) prefs.findPreference(PREF_POWERKEYSUSPEND);
+        mPowerkeySuspend = (SwitchPreference) prefs.findPreference(PREF_POWERKEYSUSPEND);
         mWakeTimeout = (SeekBarPreference) prefs.findPreference(PREF_WAKE_TIMEOUT);
         mVibrationStrength = (SeekBarPreference) prefs.findPreference(PREF_VIBRATION_STRENGTH);
-        mTouchWake = (CheckBoxPreference) prefs.findPreference(PREF_TOUCHWAKE);
+        mTouchWake = (SwitchPreference) prefs.findPreference(PREF_TOUCHWAKE);
         mTouchWakeTimeout = (SeekBarPreference) prefs.findPreference(PREF_TOUCHWAKE_TIMEOUT);
 
         if (!FileUtils.hasTouchscreenGestures()) {
-            Preference hideCat = (CheckBoxPreference) findPreference(PREF_SOB);
+            Preference hideCat = (SwitchPreference) findPreference(PREF_SOB);
             prefs.removePreference(hideCat);
         }
 
@@ -147,7 +144,7 @@ public class TouchControlSettings extends PreferenceFragment
         }
 
         if (!new File(DT2W2_FILE).exists()) {
-            Preference hideCat = (CheckBoxPreference) findPreference(PREF_DOUBLETAP2WAKE2);
+            Preference hideCat = (SwitchPreference) findPreference(PREF_DOUBLETAP2WAKE2);
             prefs.removePreference(hideCat);
         } else {
             mDoubletap2Wake2.setChecked(FileUtils.readOneLine(DT2W2_FILE).equals("1"));
@@ -174,16 +171,8 @@ public class TouchControlSettings extends PreferenceFragment
             mSweep2Sleep.setOnPreferenceChangeListener(this);
         }
 
-        if (!new File(GESTURES_FILE).exists()) {
-            Preference hideCat = (CheckBoxPreference) findPreference(PREF_ENABLE_GESTURES);
-            prefs.removePreference(hideCat);
-        } else {
-            mEnableGestures.setChecked(FileUtils.readOneLine(GESTURES_FILE).equals("1"));
-            mEnableGestures.setOnPreferenceChangeListener(this);
-        }
-
         if (!new File(PWKS_FILE).exists()) {
-            Preference hideCat = (CheckBoxPreference) findPreference(PREF_POWERKEYSUSPEND);
+            Preference hideCat = (SwitchPreference) findPreference(PREF_POWERKEYSUSPEND);
             prefs.removePreference(hideCat);
         } else {
             mPowerkeySuspend.setChecked(FileUtils.readOneLine(PWKS_FILE).equals("Y"));
@@ -209,7 +198,7 @@ public class TouchControlSettings extends PreferenceFragment
         }
 
         if (!new File(T2W_FILE).exists()) {
-            Preference hideCat = (Preference) findPreference(PREF_TOUCHWAKE);
+            Preference hideCat = (SwitchPreference) findPreference(PREF_TOUCHWAKE);
             prefs.removePreference(hideCat);
         } else {
             mTouchWake.setChecked(FileUtils.readOneLine(T2W_FILE).equals("1"));
@@ -272,14 +261,6 @@ public class TouchControlSettings extends PreferenceFragment
                 mSweep2Sleep.setSummary(mSweep2Sleep.getEntries()[index]);
             }
             mPreferences.edit().putString(PREF_SWEEP2SLEEP, (String) newValue).commit();
-            return true;
-        } else if (preference == mEnableGestures) {
-            if (Integer.parseInt(FileUtils.readOneLine(GESTURES_FILE)) == 0) {
-                new CMDProcessor().su.runWaitFor("busybox echo 1 > " + GESTURES_FILE);
-            } else {
-                new CMDProcessor().su.runWaitFor("busybox echo 0 > " + GESTURES_FILE);
-            }
-            mPreferences.edit().putBoolean(PREF_ENABLE_GESTURES, (Boolean) newValue).commit();
             return true;
         } else if (preference == mPowerkeySuspend) {
             if (newValue.toString().equals("true")) {

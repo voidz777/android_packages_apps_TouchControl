@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.mahdi.touchcontrol"
-          android:versionCode="1"
-          android:versionName="1" >
+          android:versionCode="2"
+          android:versionName="0" >
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -11,7 +11,7 @@
 
     <uses-sdk
             android:minSdkVersion="18"
-            android:targetSdkVersion="19" />
+            android:targetSdkVersion="21" />
 
     <application
             android:icon="@android:drawable/sym_def_app_icon"
@@ -21,7 +21,7 @@
         <activity android:name=".settings.TouchControlActivity"
             android:icon="@drawable/app_icon"
             android:label="@string/touch_control_title"
-            android:theme="@style/Theme.Main"
+            android:theme="@style/AppTheme"
             android:configChanges="orientation|screenSize">
           <intent-filter>
                 <action android:name="com.mahdi.action.LAUNCH_TOUCH_CONTROL_SETTINGS" />

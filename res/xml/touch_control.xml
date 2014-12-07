@@ -18,7 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="com.mahdi.touchcontrol">
 
-    <CheckBoxPreference
+    <SwitchPreference
         android:key="set_on_boot"
         android:title="@string/set_on_boot_title"
         android:summary="@string/set_on_boot_summary"
@@ -33,7 +33,7 @@
         android:entryValues="@array/doubletap2wake_values"
         android:defaultValue="0" />
 
-    <CheckBoxPreference
+    <SwitchPreference
         android:key="doubletap_2_wake2"
         android:title="@string/doubletap2wake_title"
         android:summary="@string/doubletap2wake_summary"
@@ -57,13 +57,7 @@
         android:entryValues="@array/sweep2sleep_values"
         android:defaultValue="0" />
 
-    <CheckBoxPreference
-        android:key="enable gestures"
-        android:title="@string/gestures_title"
-        android:summary="@string/gestures_summary"
-        android:persistent="false" />
-
-    <CheckBoxPreference
+    <SwitchPreference
         android:key="powerkey_suspend"
         android:title="@string/powerkeysuspend_title"
         android:summary="@string/powerkeysuspend_summary"
@@ -89,7 +83,7 @@
         settings:unitsRight=""
         android:persistent="false" />
 
-    <CheckBoxPreference
+    <SwitchPreference
         android:key="touch_wake"
         android:title="@string/touchwake_title"
         android:summary="@string/touchwake_summary"
