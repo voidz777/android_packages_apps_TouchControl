@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Title -->
-    <string name="touch_control_title">Advanced</string>
+    <string name="touch_control_title">Touch Control</string>
 
     <!-- Set on boot -->
     <string name="set_on_boot_title">Set on boot</string>
