@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 Mahdi-Rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Title -->
+    <string name="touch_control_title">Dokunmatik Kontrol</string>
+
+    <!-- Set on boot -->
+    <string name="set_on_boot_title">Açılışta ayarla</string>
+    <string name="set_on_boot_summary">Açılışta ayarları geri yükle</string>
+
+    <!-- Double tap to wake -->
+    <string name="doubletap2wake_title">Uyandırmak için çift dokunun</string>
+    <string name="doubletap2wake_summary">Ekranı uyandırmak için herhangi bir yere çift dokunun</string>
+    <string name="doubletap2wake_off">Devre dışı</string>
+    <string name="doubletap2wake_bottom">Ekranın alt yarısı</string>
+    <string name="doubletap2wake_full">Tüm ekran</string>
+
+    <!-- Sweep to wake -->
+    <string name="sweep2wake_title">Uyandırmak için kaydır</string>
+    <string name="sweep2wake_off">Devre dışı</string>
+    <string name="sweep2wake_right">Sağ</string>
+    <string name="sweep2wake_left">Sol</string>
+    <string name="sweep2wake_up">Yukarı</string>
+    <string name="sweep2wake_down">Aşağı</string>
+    <string name="sweep2wake_right_left">Sağ\'a ve sol\'a</string>
+    <string name="sweep2wake_right_up">Sağ\'a ve yukarı</string>
+    <string name="sweep2wake_right_down">Sağ\'a ve aşağı</string>
+    <string name="sweep2wake_left_up">Sola ve yukarı</string>
+    <string name="sweep2wake_left_down">Sola ve aşağı</string>
+    <string name="sweep2wake_up_down">Yukarı ve aşağı</string>
+    <string name="sweep2wake_all">Tüm yönler</string>
+
+    <!-- Sweep to sleep -->
+    <string name="sweep2sleep_title">Uyku için kaydır</string>
+    <string name="sweep2sleep_off">Devre dışı</string>
+    <string name="sweep2sleep_right">Sağ</string>
+    <string name="sweep2sleep_left">Sol</string>
+    <string name="sweep2sleep_right_left">Sağ ve sol</string>
+
+    <!-- Gestures -->
+    <string name="gestures_title">Uyandırma jestleri</string>
+    <string name="gestures_summary">Bu seçenek sadece uyandırma jest fonksiyonu sağlar, jest eylemler eklemek için Wake Gesture Xposed modülünü yüklemeniz gerekir</string>
+
+    <!-- Powerkey suspend -->
+    <string name="powerkeysuspend_title">Power key suspend</string>
+    <string name="powerkeysuspend_summary">Güç anahtarını kullanarak ekranını kapatmak için geçici olarak tüm seçenekleri devre dışı olacaktır</string>
+
+    <!-- Wake timeout -->
+    <string name="wake_timeout_title">Uyandırma zaman aşımı</string>
+    <string name="wake_timeout_summary">Bu zaman aşımından sonra seçenekler geçici olarak devre dışı bırakılır</string>
+
+    <!-- Vibration strength -->
+    <string name="vibration_strength_title">Titreşim gücü</string>
+    <string name="vibration_strength_summary">Dokunsal geri bildirim gücünü ayarlama</string>
+
+    <!-- Touch wake -->
+    <string name="touchwake_title">Dokunmatik uyandırma</string>
+    <string name="touchwake_summary">Etkin, bu zaman aşımında ekranı açmak mümkün olacak</string>
+
+    <!-- Touch wake timeout -->
+    <string name="touchwake_timeout_title">Dokunarak uyandırma zaman aşımı</string>
+    <string name="touchwake_timeout_summary">Bu zaman aşımından sonra seçenekler geçici olarak devre dışı bırakılır</string>
+
+    <!-- Warning dialog -->
+    <string name="touch_control_warning_title">Dikkatli ilerleyin</string>
+    <string name="touch_control_warning">Bu ayarlar, normal boşta pil tüketimi daha yüksek neden olma potansiyeline sahip.\n\nBu ayarları etkinleştirdikten sonra pil ömrü hakkında şikayet etmemenizi istiyoruz.</string>
+
+    <!-- No support dialog -->
+    <string name="no_support_title">Desteklenmiyor</string>
+    <string name="no_support_warning">Kullandığınız kernel bu özellikleri desteklemiyor.</string>
+
+    <!-- General strings -->
+    <string name="ok">TAMAM</string>
+    <string name="cancel">Vazgeç</string>
+
+</resources>
