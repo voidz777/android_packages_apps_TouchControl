@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 Mahdi-Rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Title -->
+    <string name="touch_control_title">Kontrola dotyku</string>
+
+    <!-- Set on boot -->
+    <string name="set_on_boot_title">Ustaw przy starcie</string>
+    <string name="set_on_boot_summary">Przywróć ustawienia przy starcie</string>
+
+    <!-- Double tap to wake -->
+    <string name="doubletap2wake_title">Wybudzanie podwójnym dotknięciem</string>
+    <string name="doubletap2wake_summary">Dotknij dwukrotnie w dowolnym miejscu, aby wybudzić ekran</string>
+    <string name="doubletap2wake_off">Wyłączone</string>
+    <string name="doubletap2wake_bottom">Dolna połowa ekranu</string>
+    <string name="doubletap2wake_full">Cały ekran</string>
+
+    <!-- Sweep to wake -->
+    <string name="sweep2wake_title">Przesuń, aby wybudzić ekran</string>
+    <string name="sweep2wake_off">Wyłączone</string>
+    <string name="sweep2wake_right">Prawo</string>
+    <string name="sweep2wake_left">Lewo</string>
+    <string name="sweep2wake_up">Góra</string>
+    <string name="sweep2wake_down">Dół</string>
+    <string name="sweep2wake_right_left">Prawo i lewo</string>
+    <string name="sweep2wake_right_up">Prawo i góra</string>
+    <string name="sweep2wake_right_down">Prawo i dół</string>
+    <string name="sweep2wake_left_up">Lewo i góra</string>
+    <string name="sweep2wake_left_down">Lewo i dół</string>
+    <string name="sweep2wake_up_down">Góra i dół</string>
+    <string name="sweep2wake_all">Wszystkie kierunki</string>
+
+    <!-- Sweep to sleep -->
+    <string name="sweep2sleep_title">Przesuń, aby uśpić ekran</string>
+    <string name="sweep2sleep_off">Wyłączone</string>
+    <string name="sweep2sleep_right">Prawo</string>
+    <string name="sweep2sleep_left">Lewo</string>
+    <string name="sweep2sleep_right_left">Prawo i lewo</string>
+
+    <!-- Gestures -->
+    <string name="gestures_title">Gesty wybudzania</string>
+    <string name="gestures_summary">Ta opcja jedynie włącza obsługę gestów. Musisz zainstalować moduł Wake Gesture Xposed, aby dodawać akcje gestów</string>
+
+    <!-- Powerkey suspend -->
+    <string name="powerkeysuspend_title">Zawieszenie przycisku zasilania</string>
+    <string name="powerkeysuspend_summary">Wykorzystanie przycisku zasilania do wyłączenia ekranu tymczasowo wyłączy wszystkie opcje</string>
+
+    <!-- Wake timeout -->
+    <string name="wake_timeout_title">Limit czasu wybudzania</string>
+    <string name="wake_timeout_summary">Po upływie tego czasu, opcje zostaną tymczasowo wyłączone</string>
+
+    <!-- Vibration strength -->
+    <string name="vibration_strength_title">Siła wibracji</string>
+    <string name="vibration_strength_summary">Dostosuj siłę wibracji</string>
+
+    <!-- Touch wake -->
+    <string name="touchwake_title">Wybudzanie dotykiem</string>
+    <string name="touchwake_summary">Jeśli włączona, po upływie czasu będziesz w stanie włączyć ekran</string>
+
+    <!-- Touch wake timeout -->
+    <string name="touchwake_timeout_title">Limit czasu wybudzania dotykiem</string>
+    <string name="touchwake_timeout_summary">Po upływie tego czasu, opcje zostaną tymczasowo wyłączone</string>
+
+    <!-- Warning dialog -->
+    <string name="touch_control_warning_title">Postępuj ostrożnie</string>
+    <string name="touch_control_warning">Te ustawienia mogą zwiększyć zużycie baterii.\n\nProsimy nie narzekać na czas pracy baterii, jeśli te opcje zostały włączone.</string>
+
+    <!-- No support dialog -->
+    <string name="no_support_title">Brak wsparcia</string>
+    <string name="no_support_warning">Kernel, którego używasz, nie wspiera tych opcji</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+
+</resources>

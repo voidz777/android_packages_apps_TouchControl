@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 Mahdi-Rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Title -->
+    <string name="touch_control_title">触摸控制</string>
+
+    <!-- Set on boot -->
+    <string name="set_on_boot_title">启动时设置</string>
+    <string name="set_on_boot_summary">启动时恢复设置</string>
+
+    <!-- Double tap to wake -->
+    <string name="doubletap2wake_title">双击唤醒</string>
+    <string name="doubletap2wake_summary">任意双击以唤醒屏幕</string>
+    <string name="doubletap2wake_off">关闭</string>
+    <string name="doubletap2wake_bottom">屏幕下半部</string>
+    <string name="doubletap2wake_full">全屏</string>
+
+    <!-- Sweep to wake -->
+    <string name="sweep2wake_title">滑动解锁</string>
+    <string name="sweep2wake_off">关闭</string>
+    <string name="sweep2wake_right">右滑</string>
+    <string name="sweep2wake_left">左滑</string>
+    <string name="sweep2wake_up">上滑</string>
+    <string name="sweep2wake_down">下滑</string>
+    <string name="sweep2wake_right_left">左滑或右滑</string>
+    <string name="sweep2wake_right_up">右滑或上滑</string>
+    <string name="sweep2wake_right_down">右滑或下滑</string>
+    <string name="sweep2wake_left_up">左滑或上滑</string>
+    <string name="sweep2wake_left_down">左滑或下滑</string>
+    <string name="sweep2wake_up_down">上滑或下滑</string>
+    <string name="sweep2wake_all">所有方向</string>
+
+    <!-- Sweep to sleep -->
+    <string name="sweep2sleep_title">滑动休眠</string>
+    <string name="sweep2sleep_off">关闭</string>
+    <string name="sweep2sleep_right">右滑</string>
+    <string name="sweep2sleep_left">左滑</string>
+    <string name="sweep2sleep_right_left">左滑或右滑</string>
+
+    <!-- Gestures -->
+    <string name="gestures_title">唤醒手势</string>
+    <string name="gestures_summary">该选项仅用于开关唤醒手势，需要安装相关Xposed模块来增加手势</string>
+
+    <!-- Powerkey suspend -->
+    <string name="powerkeysuspend_title">电源键中断</string>
+    <string name="powerkeysuspend_summary">使用电源键关闭屏幕会暂时关闭所有设置</string>
+
+    <!-- Wake timeout -->
+    <string name="wake_timeout_title">唤醒超时</string>
+    <string name="wake_timeout_summary">超时后会暂时关闭设置</string>
+
+    <!-- Vibration strength -->
+    <string name="vibration_strength_title">振动强度</string>
+    <string name="vibration_strength_summary">调整触控反馈强度</string>
+
+    <!-- Touch wake -->
+    <string name="touchwake_title">触摸唤醒</string>
+    <string name="touchwake_summary">开启该功能在超时后能点亮屏幕</string>
+
+    <!-- Touch wake timeout -->
+    <string name="touchwake_timeout_title">触摸唤醒超时</string>
+    <string name="touchwake_timeout_summary">超时后将会暂时关闭设置</string>
+
+    <!-- Warning dialog -->
+    <string name="touch_control_warning_title">谨慎操作</string>
+    <string name="touch_control_warning">这些设置具有影响正常续航的潜在可能。\n\n如果你开启了，我们希望你不要抱怨电池续航下降。</string>
+
+    <!-- No support dialog -->
+    <string name="no_support_title">不兼容</string>
+    <string name="no_support_warning">当前使用内核不支持这些特性。</string>
+
+    <!-- General strings -->
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+
+</resources>
