@@ -59,6 +59,19 @@
         <item>15</item>
     </string-array>
 
+    <!-- Values for the sweep to wake 2 -->
+    <string-array name="sweep2wake2_entries">
+        <item>@string/sweep2wake_off</item>
+        <item>@string/sweep2wake2_sleep_wake</item>
+        <item>@string/sweep2sleep_on</item>
+    </string-array>
+
+    <string-array name="sweep2wake2_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <!-- Values for the sweep to sleep -->
     <string-array name="sweep2sleep_entries">
         <item>@string/sweep2sleep_off</item>

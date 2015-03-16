@@ -24,15 +24,6 @@
         android:summary="@string/set_on_boot_summary"
         android:defaultValue="false" />
 
-    <ListPreference
-        android:key="doubletap_2_wake"
-        android:persistent="false"
-        android:dialogTitle="@string/doubletap2wake_title"
-        android:title="@string/doubletap2wake_title"
-        android:entries="@array/doubletap2wake_entries"
-        android:entryValues="@array/doubletap2wake_values"
-        android:defaultValue="0" />
-
     <SwitchPreference
         android:key="doubletap_2_wake2"
         android:title="@string/doubletap2wake_title"
@@ -47,41 +38,6 @@
         android:entries="@array/sweep2wake_entries"
         android:entryValues="@array/sweep2wake_values"
         android:defaultValue="0" />
-
-    <ListPreference
-        android:key="sweep_2_sleep"
-        android:persistent="false"
-        android:dialogTitle="@string/sweep2sleep_title"
-        android:title="@string/sweep2sleep_title"
-        android:entries="@array/sweep2sleep_entries"
-        android:entryValues="@array/sweep2sleep_values"
-        android:defaultValue="0" />
-
-    <SwitchPreference
-        android:key="powerkey_suspend"
-        android:title="@string/powerkeysuspend_title"
-        android:summary="@string/powerkeysuspend_summary"
-        android:persistent="false" />
-
-    <com.mahdi.touchcontrol.preference.SeekBarPreference
-        android:key="wake_timeout"
-        android:title="@string/wake_timeout_title"
-        android:summary="@string/wake_timeout_summary"
-        android:max="30"
-        settings:min="0"
-        settings:unitsLeft=""
-        settings:unitsRight="min"
-        android:persistent="false" />
-
-    <com.mahdi.touchcontrol.preference.SeekBarPreference
-        android:key="vibration_strength"
-        android:title="@string/vibration_strength_title"
-        android:summary="@string/vibration_strength_summary"
-        android:max="50"
-        settings:min="0"
-        settings:unitsLeft=""
-        settings:unitsRight=""
-        android:persistent="false" />
 
     <SwitchPreference
         android:key="touch_wake"
