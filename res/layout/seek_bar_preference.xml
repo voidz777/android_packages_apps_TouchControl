@@ -4,9 +4,9 @@
     android:id="@android:id/widget_frame"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="8dp"
+    android:paddingLeft="14dp"
     android:paddingTop="5dp"
-    android:paddingRight="10dp"
+    android:paddingRight="12dp"
     android:paddingBottom="5dp"
     >
 
@@ -23,14 +23,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"
-            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="?android:attr/textColorSecondary" />
 
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/summary" >
-    
+
             <TextView android:id="@+id/seekBarPrefUnitsRight"
                     android:layout_centerInParent="true"
                     android:layout_alignParentRight="true"

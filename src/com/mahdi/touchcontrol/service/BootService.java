@@ -85,8 +85,24 @@ public class BootService extends Service implements Constants {
                 }
             }
 
+            if (new File(DT2W_FILE).exists()) {
+                if (preferences.getBoolean(PREF_DOUBLETAP2WAKE3, false)) {
+                    sb.append("busybox echo 1 > " + DT2W_FILE + ";\n");
+                } else {
+                    sb.append("busybox echo 0 > " + DT2W_FILE + ";\n");
+                }
+            }
+
             if (new File(S2W_FILE).exists()) {
                 String sweep2Wake = preferences.getString(PREF_SWEEP2WAKE, null);
+                if (sweep2Wake != null) {
+                   sb.append("busybox echo " + sweep2Wake + " > " + S2W_FILE)
+                   .append(" > ").append(S2W_FILE).append(";\n");
+                }
+            }
+
+            if (new File(S2W_FILE).exists()) {
+                String sweep2Wake = preferences.getString(PREF_SWEEP2WAKE2, null);
                 if (sweep2Wake != null) {
                    sb.append("busybox echo " + sweep2Wake + " > " + S2W_FILE)
                    .append(" > ").append(S2W_FILE).append(";\n");
@@ -101,11 +117,27 @@ public class BootService extends Service implements Constants {
                 }
             }
 
+            if (new File(SHORT_SWEEP_FILE).exists()) {
+                if (preferences.getBoolean(PREF_SHORT_SWEEP, false)) {
+                    sb.append("busybox echo 1 > " + SHORT_SWEEP_FILE + ";\n");
+                } else {
+                    sb.append("busybox echo 0 > " + SHORT_SWEEP_FILE + ";\n");
+                }
+            }
+
             if (new File(PWKS_FILE).exists()) {
                 if (preferences.getBoolean(PREF_POWERKEYSUSPEND, false)) {
                     sb.append("busybox echo Y > " + PWKS_FILE + ";\n");
                 } else {
                     sb.append("busybox echo N > " + PWKS_FILE + ";\n");
+                }
+            }
+
+            if (new File(PWKS_FILE2).exists()) {
+                if (preferences.getBoolean(PREF_POWERKEYSUSPEND2, false)) {
+                    sb.append("busybox echo 1 > " + PWKS_FILE2 + ";\n");
+                } else {
+                    sb.append("busybox echo 0 > " + PWKS_FILE2 + ";\n");
                 }
             }
 
