@@ -30,15 +30,6 @@
         android:summary="@string/doubletap2wake_summary"
         android:persistent="false" />
 
-    <ListPreference
-        android:key="sweep_2_wake"
-        android:persistent="false"
-        android:dialogTitle="@string/sweep2wake_title"
-        android:title="@string/sweep2wake_title"
-        android:entries="@array/sweep2wake_entries"
-        android:entryValues="@array/sweep2wake_values"
-        android:defaultValue="0" />
-
     <SwitchPreference
         android:key="touch_wake"
         android:title="@string/touchwake_title"
