@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 
@@ -69,7 +70,7 @@ public class BootService extends Service implements Constants {
                         TouchControlSettings.TOUCH_CONTROL_SETTINGS, Activity.MODE_PRIVATE);
             final StringBuilder sb = new StringBuilder();
 
-            if (new File(DT2W_FILE).exists()) {
+            if (new File(DT2W_FILE).exists() && "hammerhead".equals(android.os.Build.DEVICE)) {
                 String doubletap2Wake = preferences.getString(PREF_DOUBLETAP2WAKE, null);
                 if (doubletap2Wake != null) {
                    sb.append("busybox echo " + doubletap2Wake + " > " + DT2W_FILE)
@@ -85,7 +86,7 @@ public class BootService extends Service implements Constants {
                 }
             }
 
-            if (new File(DT2W_FILE).exists()) {
+            if (new File(DT2W_FILE).exists() && !"hammerhead".equals(android.os.Build.DEVICE)) {
                 if (preferences.getBoolean(PREF_DOUBLETAP2WAKE3, false)) {
                     sb.append("busybox echo 1 > " + DT2W_FILE + ";\n");
                 } else {
