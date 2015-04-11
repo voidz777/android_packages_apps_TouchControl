@@ -93,6 +93,8 @@ public class TouchControlSettings extends PreferenceFragment
             addPreferencesFromResource(R.xml.touch_control_hammerhead);
         } else if ("mako".equals(android.os.Build.DEVICE)) {
             addPreferencesFromResource(R.xml.touch_control_mako);
+        } else if ("maguro".equals(android.os.Build.DEVICE)) {
+            addPreferencesFromResource(R.xml.touch_control_maguro);
         }
 
         PreferenceScreen prefs = getPreferenceScreen();
